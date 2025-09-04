@@ -6,7 +6,8 @@
 }
 
 body{
-    height: 88vh;
+    margin: 0;
+    height: 99vh;
     background: linear-gradient(to top, rgba(0, 0, 0,1) 0%,rgba(50, 50, 50, 1) 100%);
 }
 
@@ -17,11 +18,12 @@ a{
 main{
     display: flex;
     flex-direction: column;
-    margin: auto;
-    margin-top: 1.6%;
-    padding-bottom: 0px 0px 0px 32px;
-    max-width: 730px;
-    height: 728´x;
+    /* margin: auto; */
+    margin-top: -75%;
+    /* margin-top: 5%; */
+    /* padding-bottom: 0px 0px 0px 32px; */
+    width: 734px;
+    height: 728px;
     background: linear-gradient(to bottom, #121212 0%,rgba(18, 18, 18, 1) 100%);
     border-radius: 1vh;
     padding: 32px;
@@ -191,6 +193,11 @@ hr{
    font-family: 16px;
 }
 
+#container-other>nav a:hover{
+    color: #1ed760;
+    text-decoration: underline;
+}
+
 footer{
     width: 100%;
     height: 9.2vh;
@@ -212,4 +219,68 @@ footer p a{
     text-decoration: underline;
     color: #b3b3b3;
     font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    main {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 0;
+        border-radius: 0;
+        height: auto;
+        min-height: calc(100vh - 9.2vh);
+    }
+    
+    .btn-redes, #btn-redes-numero {
+        width: 100%;
+        max-width: 324px;
+    }
+    
+    #container-other input, #container-other button {
+        width: 100%;
+        max-width: 324px;
+    }
+    
+    hr {
+        width: 80%;
+        margin: 32px auto;
+    }
+    
+    footer {
+        margin-top: 0;
+    }
+    
+    footer p {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        padding: 2% 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+    }
+    
+    main {
+        margin: 0 auto;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
